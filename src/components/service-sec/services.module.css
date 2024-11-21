@@ -1,0 +1,44 @@
+.services{
+    width: 100%;
+    background-color: var(--background-gray);
+    text-align: center;
+    padding: 154px 40px 160px 40px;
+}
+.services h1{
+    font-size: 48px;
+    line-height: 48px;
+    margin-bottom: 24px;
+}
+.services span{
+    color: var(--logo-color);
+}
+.services p{
+    font-size: 16.73px;
+    line-height: 28px;
+    margin-bottom: 80px;
+}
+.servicescarddiv{
+    width: 100%;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(4, 1fr);
+    
+    
+
+}
+@media(max-width:768px){
+    .servicescarddiv{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:390px){
+    .services{
+        padding: 154px 8px 160px 8px;
+    }
+    .servicescarddiv{
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+}

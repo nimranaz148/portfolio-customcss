@@ -1,0 +1,68 @@
+.about{
+    width: 100%;
+    background-color: var(--background-light-gray);
+    padding: 10rem 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.aboutleftdiv{
+    width: 40.70%;
+}
+.aboutleftdiv h1{
+    font-size: 3rem;
+    line-height: 4.5rem;
+    margin-bottom: 0.5rem;
+}
+.aboutleftdiv p{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    color: var(--logo-color);
+}
+.detailstext{
+    font-size: 16.88px;
+    line-height: 27px;
+    color: white;
+    margin-top: 1.4688rem;
+    margin-bottom: 32.5px;
+
+}
+.aboutrightdiv{
+    margin-right: 190px;
+
+}
+
+@media(max-width:768px){
+    .about{
+        padding: 60px 40px 160px 40px;
+        
+
+    }
+    .aboutleftdiv{
+        width: 45.182%;
+    }
+    .aboutrightdiv{
+        margin-right: 0px;
+    }
+    .img{
+        width: 350px;
+
+    }
+}
+
+@media(max-width:390px){
+    .about{
+        padding: 10rem 0rem;
+        flex-direction: column;
+        
+
+    }
+    .aboutleftdiv{
+        width: 90%;
+    }
+    .aboutrightdiv{
+        margin-right: 0px;
+    }
+   
+}
