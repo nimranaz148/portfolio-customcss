@@ -1,9 +1,8 @@
 'use client'
 import React from 'react'
 import styles from './testimonial.module.css'
-import { caveatFont, interFont } from '@/font'
+import { caveatFont } from '@/font'
 import useEmblaCarousel from 'embla-carousel-react'
-import Image from 'next/image'
 import Testimonialcard from './testimonialcard/testimonialcard'
 import Autoplay from 'embla-carousel-autoplay'
 

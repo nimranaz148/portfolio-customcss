@@ -1,5 +1,6 @@
 'use client'
-import React, { useState } from 'react'
+import React from 'react';
+
 import styles from './Header.module.css'
 
 import { caveatFont, interFont } from '@/font'
@@ -7,6 +8,7 @@ import Link from 'next/link'
 import { TiThMenu } from "react-icons/ti";
 import { CgClose } from "react-icons/cg";
 import { AnimatePresence, motion } from 'framer-motion'
+
 
 
 function Header() {

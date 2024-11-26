@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./services.module.css";
 import { caveatFont, interFont } from "@/font";
-import Image from "next/image";
 import Servicescard from "./services-card/Servicescard";
 
 function services() {

@@ -4,7 +4,6 @@ import styles from './Portfoliocard.module.css'
 import Image from 'next/image'
 import { portfoliocards } from '@/constant/portfoliocard'
 import {motion} from "framer-motion"
-import Link from 'next/link'
 
 function Portfoliocard() {
     return (
