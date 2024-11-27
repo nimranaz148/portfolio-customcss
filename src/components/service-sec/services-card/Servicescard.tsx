@@ -1,6 +1,6 @@
 'use client'
 import React, { useRef } from 'react'
-import styles from '@/components/service-sec/services-card/Servicescard.module.css';
+import styles from './servicescard.module.css'
 
 import Image from 'next/image'
 import { interFont } from '@/font'
