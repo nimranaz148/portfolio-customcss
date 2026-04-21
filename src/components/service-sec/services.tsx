@@ -8,15 +8,13 @@ function services() {
     <>
       <section id="services" className={styles.services}>
         <h1 className={caveatFont.className}>
-          <span>W</span>hat <span>I</span> <span>D</span>o <span>F</span>or{" "}
-          <span>C</span>lients
+          <span>W</span>hat <span>I</span> <span>B</span>ring <span>T</span>o{" "}
+          <span>P</span>roducts
         </h1>
 
         <p className={interFont.className}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-          rerum nesciunt laborum aspernatur id delectus velit ullam deleniti{" "}
-          <br /> aut tenetur tempore cumque fugit, quibusdam recusandae nulla
-          eveniet, impedit alias distinctio!
+          I help teams build frontend experiences that are responsive, maintainable,
+          SEO-aware, and ready to scale from landing pages to production dashboards.
         </p>
 
         <div className={styles.servicescarddiv}>

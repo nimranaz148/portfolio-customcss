@@ -13,10 +13,8 @@ function Testimonial() {
         <section id='testimonial' className={styles.testimonial}>
 
             <h1 className={caveatFont.className}>
-                <span>W</span>hat <span> {" "}
-                    O</span>ther {" "}
-                <span>P</span>eople {" "}
-                <span>S</span>ay
+                <span>E</span>xperience <span> {" "}
+                    H</span>ighlights
             </h1>
 
             <div className={styles.embla} ref={emblaRef}>

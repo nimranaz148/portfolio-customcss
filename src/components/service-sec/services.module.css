@@ -1,8 +1,9 @@
 .services{
     width: 100%;
-    background-color: var(--background-gray);
+    background:
+        linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
     text-align: center;
-    padding: 154px 40px 160px 40px;
+    padding: 8rem 40px;
 }
 .services h1{
     font-size: 48px;
@@ -13,28 +14,34 @@
     color: var(--logo-color);
 }
 .services p{
+    max-width: 720px;
+    margin: 0 auto 56px;
     font-size: 16.73px;
-    line-height: 28px;
-    margin-bottom: 80px;
+    line-height: 30px;
+    color: var(--text-secondary);
 }
 .servicescarddiv{
     width: 100%;
     display: grid;
-    gap: 16px;
+    gap: 20px;
     grid-template-columns: repeat(4, 1fr);
     
     
 
 }
 @media(max-width:768px){
+    .services{
+        padding: 6rem 24px;
+    }
+
     .servicescarddiv{
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media(max-width:390px){
+@media(max-width:520px){
     .services{
-        padding: 154px 8px 160px 8px;
+        padding: 6rem 16px;
     }
     .servicescarddiv{
         grid-template-columns: repeat(1, 1fr);

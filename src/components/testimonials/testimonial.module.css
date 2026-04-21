@@ -1,13 +1,13 @@
 .testimonial{
     width: 100%;
-    background-color: var(--background-black);
-    padding: 9.625rem 2.5rem 10rem 2.5rem;
+    background-color: transparent;
+    padding: 8rem 2rem;
     text-align: center;
 }
 .testimonial h1{
     font-size: 48px;
     line-height: 48px;
-    margin-bottom: 90px;
+    margin-bottom: 56px;
 }
 .testimonial span{
     color: var(--logo-color);
@@ -17,6 +17,8 @@
 
 .embla {
     overflow: hidden;
+    width: min(1180px, 100%);
+    margin: 0 auto;
 
   }
   .embla__container {
@@ -25,6 +27,6 @@
 
 @media(max-width:390px){
     .testimonial{
-        padding: 160px 16px 160px 16px;
+        padding: 6rem 16px;
     }
 }  

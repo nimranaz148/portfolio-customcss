@@ -1,32 +1,32 @@
 import React from 'react'
-import styles from './testimonialcard.module.css'
 import Image from 'next/image'
 import { interFont } from '@/font'
 import { testimonialcards } from '@/constant/testimonialcard'
+import styles from './testimonialcard.module.css'
 
-function testimonialcard() {
+function Testimonialcard() {
   return (
-    
-      <>
-      {testimonialcards.map((card, index ) =>{
-        return(
-            <div className={`${styles.card} ${interFont.className}`} key={index}>
-                        <div className={styles.cardimage}>
-                            <Image src={card.src} alt={"pic"} width={150} height={150}></Image>
-                        </div>
+    <>
+      {testimonialcards.map((card, index) => {
+        return (
+          <div className={`${styles.card} ${interFont.className}`} key={index}>
+            <div className={styles.cardTop}>
+              <div className={styles.cardimage}>
+                <Image src={card.src} alt={card.name} width={150} height={150} />
+              </div>
 
-                        <p>{card.name}</p>
-                        <p><span>{card.title}</span></p>
+              <div className={styles.cardMeta}>
+                <p className={styles.name}>{card.name}</p>
+                <p className={styles.title}>{card.title}</p>
+              </div>
+            </div>
 
-                        <p style={{ marginBottom: "0px" }}>{card.discription}</p>
-                    </div>
-
+            <p className={styles.description}>{card.discription}</p>
+          </div>
         )
       })}
-      
-      </>
-    
+    </>
   )
 }
 
-export default testimonialcard
+export default Testimonialcard

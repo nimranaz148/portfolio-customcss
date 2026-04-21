@@ -1,7 +1,8 @@
 .Contactus{
     width: 100%;
-    background-color: var(--background-gray);
-    padding: 154px 147px 160px 147px;
+    background:
+        linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.04));
+    padding: 8rem 40px;
     text-align: center;
 }
 .Contactus h1{
@@ -14,22 +15,24 @@
     color: var(--logo-color);
 }
 .Contactus p{
+    max-width: 700px;
+    margin: 0 auto 56px;
     font-size: 16.73px;
-    line-height: 28px;
-    margin-bottom: 96px;
+    line-height: 30px;
+    color: var(--text-secondary);
 }
 .contactusbottomdiv{
     margin: auto;
-    width: 100%;
+    width: min(1120px, 100%);
     display: flex;
-    gap: 120px;
+    gap: 28px;
     flex-direction: row;
 }
 
 .contactleftdiv{
-    width: 300px;
+    width: 320px;
     display: flex;
-    gap: 48px;
+    gap: 18px;
     flex-direction: column;
     
 }
@@ -40,77 +43,109 @@
     text-align: start;
 }
 
-
-.contactleftdivtext :nth-child(2){
-    color: #616161;
+.contactleftdivtext h6{
+    margin: 0;
 }
 
-.contactleftdivtext :nth-child(3){
+.contactleftdivtext :nth-child(2){
+    color: var(--text-secondary);
+}
+
+.contactleftdivtext a{
     color: var(--logo-color);
+    font-weight: 700;
 }
 .contactleftdivcontent{
     display: flex;
     gap: 16px;
+    padding: 22px 20px;
+    border-radius: 22px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    text-align: left;
+    box-shadow: var(--shadow-soft);
 }
 .contactrightdiv{
-    width: 650px;
-    
-    
-
+    flex: 1;
+    padding: 28px;
+    border-radius: 26px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: var(--shadow-soft);
 }
 .contactrightdiv form{
     width: 100%;
     display: flex;
-    gap: 35px;
+    gap: 20px;
     flex-direction: column;
 
 }
 .topinputdiv{
     width: 100%;
     display: flex;
-    gap: 8px;
+    gap: 14px;
 }
 .topinputdiv input{
-    width: 320px;
+    width: 100%;
 }
 
 .inputdetails{
-    padding: 15px 0px 15px 12px; 
+    width: 100%;
+    padding: 16px 16px; 
     font-size: 15px;
-    background-color: #333333;
-    border-radius: 8px;
+    color: var(--text-primary);
+    background-color: rgba(8, 14, 23, 0.72);
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.08);
+    outline: none;
+}
+
+.inputdetails::placeholder{
+    color: rgba(246, 239, 230, 0.55);
+}
+
+.inputdetails:focus{
+    border-color: rgba(255, 157, 47, 0.55);
 }
 .inputbtn{
     background-color: var(--logo-color);
-    width: 178px;
-    height: 52px;
-    border-radius: 8px;
+    width: 190px;
+    height: 54px;
+    border-radius: 999px;
     cursor: pointer;
+    color: #0b0f17;
+    font-weight: 800;
+    transition: transform 0.25s ease, background-color 0.25s ease;
+}
 
-    &:hover{
-        background-color: var(--hover-button-color);
-    }
-
+.inputbtn:hover{
+    background-color: var(--hover-button-color);
+    transform: translateY(-2px);
 }
     
 @media(max-width:768px){
     .Contactus{
-        padding: 160px 32px 160px 32px;
+        padding: 6rem 24px;
     }
     .contactusbottomdiv{
         flex-direction: column;
-         gap: 120px;  
+         gap: 24px;  
 
+    }
+
+    .contactleftdiv{
+        width: 100%;
     }
 }
 
-@media(max-width:390px){
+@media(max-width:520px){
     .contactrightdiv{
         width: 100%;
+        padding: 20px 16px;
     }
     .topinputdiv{
         flex-direction: column;
-        gap: 25px;
+        gap: 16px;
     }
 
     

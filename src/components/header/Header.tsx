@@ -1,69 +1,83 @@
 'use client'
-import React from 'react';
-
+import React from 'react'
+import Link from 'next/link'
+import { TiThMenu } from 'react-icons/ti'
+import { CgClose } from 'react-icons/cg'
+import { AnimatePresence, motion } from 'framer-motion'
+import { caveatFont, interFont } from '@/font'
 import styles from './Header.module.css'
 
-import { caveatFont, interFont } from '@/font'
-import Link from 'next/link'
-import { TiThMenu } from "react-icons/ti";
-import { CgClose } from "react-icons/cg";
-import { AnimatePresence, motion } from 'framer-motion'
-
-
+const navItems = [
+  { href: '/', label: 'Home' },
+  { href: '#about', label: 'About' },
+  { href: '#portfolio', label: 'Work' },
+  { href: '#services', label: 'Services' },
+  { href: '#testimonial', label: 'Reviews' },
+  { href: '#contact', label: 'Contact' },
+]
 
 function Header() {
   const [isOpen, setIsOpen] = React.useState(false)
+
   return (
-    <div>
-      <header className={styles.header}>
+    <header className={styles.header}>
+      <nav className={styles.nav}>
+        <Link href='/' className={`${styles.brand} ${caveatFont.className}`}>
+          Nimra Salahuddin
+        </Link>
 
-        <nav className={styles.nav}>
+        <ul className={`${interFont.className} ${styles.navUl}`}>
+          {navItems.map((item) => (
+            <li key={item.label}>
+              <Link href={item.href}>{item.label}</Link>
+            </li>
+          ))}
+        </ul>
 
-          <h1 className={caveatFont.className}>Nimra Naz</h1>
+        <button
+          type='button'
+          className={styles.menuButton}
+          onClick={() => setIsOpen(true)}
+          aria-label='Open navigation menu'
+        >
+          <TiThMenu size={28} />
+        </button>
 
-          <AnimatePresence>
-          {isOpen  ? (
-            <motion.ul className={`${interFont.className} ${styles.navUl} ${styles.active}`}
-            key={"active"}
-
-            initial={{opacity:0, width:0}}
-            animate={{opacity:1, width:"40%"}}
-            exit={{opacity:0, width:0}}
-            transition={{duration:2, type:"spring"}}
-            
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              className={styles.overlay}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
             >
-              <CgClose size={30} className={styles.close} onClick={ () =>setIsOpen(false)}/>
+              <motion.div
+                className={`${styles.mobilePanel} ${interFont.className}`}
+                initial={{ x: '100%' }}
+                animate={{ x: 0 }}
+                exit={{ x: '100%' }}
+                transition={{ duration: 0.35, ease: 'easeOut' }}
+              >
+                <button
+                  type='button'
+                  className={styles.close}
+                  onClick={() => setIsOpen(false)}
+                  aria-label='Close navigation menu'
+                >
+                  <CgClose size={30} />
+                </button>
 
-              <li> <Link href={"/"}>Home</Link></li>
-              <li> <Link href={"#about"}>About</Link></li>
-              <li> <Link href={"#portfolio"}>Portfolio</Link></li>
-              <li> <Link href={"#services"}>Services</Link></li>
-              <li> <Link href={"#testimonial"}>Testimonial</Link></li>
-              <li> <Link href={"#contact"}>Contact</Link></li>
-
-            </motion.ul>
-          ) :
-            (
-              <ul className={`${interFont.className} ${styles.navUl}`}>
-
-                <li> <Link href={"/"}>Home</Link></li>
-                <li> <Link href={"#about"}>About</Link></li>
-                <li> <Link href={"#portfolio"}>Portfolio</Link></li>
-                <li> <Link href={"#services"}>Services</Link></li>
-                <li> <Link href={"#testimonial"}>Testimonial</Link></li>
-                <li> <Link href={"#contact"}>Contact</Link></li>
-
-              </ul>
-            )}
-            </AnimatePresence>
-
-
-
-          <TiThMenu size={30} className={styles.menu} onClick={() => { setIsOpen(!isOpen) }} />
-
-        </nav>
-      </header>
-    </div>
+                {navItems.map((item) => (
+                  <Link key={item.label} href={item.href} onClick={() => setIsOpen(false)}>
+                    {item.label}
+                  </Link>
+                ))}
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </nav>
+    </header>
   )
 }
 

@@ -9,16 +9,18 @@ import { sendEmail } from "@/utils/emailService";
 function Contactus() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     const templateParams = {
-      to_name: "Nimra Naaz",
+      to_name: "Nimra Salahuddin",
       from_name: name,
       from_email: email,
-      message: message,
+      subject,
+      message,
     };
 
     try {
@@ -26,6 +28,7 @@ function Contactus() {
       alert("Email sent successfully");
       setName("");
       setEmail("");
+      setSubject("");
       setMessage("");
     } catch (error) {
       console.error("EmailJs Error", error);
@@ -41,10 +44,8 @@ function Contactus() {
         </h1>
 
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora
-          aperiam illo assumenda dolorem quas! Error necessitatibus, similique
-          est aliquid voluptate temporibus itaque ex quae, repellat at quisquam
-          optio totam rerum?
+          I am available for frontend developer roles, internships, and freelance
+          opportunities. If your team is hiring, feel free to reach out.
         </p>
 
         <div className={styles.contactusbottomdiv}>
@@ -53,9 +54,9 @@ function Contactus() {
               <MdEmail size={24} color="var(--logo-color)" />
 
               <div className={styles.contactleftdivtext}>
-                <h6>Have a question</h6>
-                <h6>Iam here to help you</h6>
-                <h6>Email me at nimranaz222@gmil.com</h6>
+                <h6>Have a question?</h6>
+                <h6>I am here to help you</h6>
+                <a href="mailto:nimranaz148@gmail.com">nimranaz148@gmail.com</a>
               </div>
             </div>
 
@@ -65,7 +66,7 @@ function Contactus() {
               <div className={styles.contactleftdivtext}>
                 <h6>Current Location</h6>
                 <h6>Karachi, Pakistan</h6>
-                <h6>Serving clients worldwide</h6>
+                <h6>Available full-time, on-site or remote</h6>
               </div>
             </div>
           </div>
@@ -80,32 +81,39 @@ function Contactus() {
                   name="name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
+                  required
                 />
 
                 <input
-                  type="text"
+                  type="email"
                   placeholder="Your email"
                   className={styles.inputdetails}
                   name="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  required
                 />
               </div>
 
               <input
                 type="text"
-                placeholder="subject"
+                placeholder="Subject"
                 className={styles.inputdetails}
                 style={{ width: "100%" }}
+                name="subject"
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
+                required
               />
 
               <textarea
-                placeholder="your message"
+                placeholder="Your message"
                 className={styles.inputdetails}
                 style={{ height: "224px" }}
                 name="message"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
+                required
               ></textarea>
 
               <input

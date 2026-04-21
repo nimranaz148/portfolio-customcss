@@ -1,8 +1,8 @@
 .portfolio{
     width: 100%;
-    background-color: var(--background-black);
+    background-color: transparent;
     text-align: center;
-    padding: 9rem 32px;
+    padding: 8rem 32px;
 }
 .portfolio h1{
     font-size: 48px;
@@ -13,15 +13,17 @@
     color: var(--logo-color);
 }
 .portfolio p{
+    max-width: 680px;
+    margin: 0 auto 4rem;
     font-size: 17px;
-    line-height: 28px;
-    margin-bottom: 6rem;
+    line-height: 30px;
+    color: var(--text-secondary);
 
 }
 .mywork{
     width: 100%;
     display: grid;
-    gap: 95px;
+    gap: 48px;
     grid-template-columns: repeat(3, 1fr);
 
 }
@@ -31,15 +33,19 @@
 @media(max-width:768px){
     .mywork{
         grid-template-columns: repeat(2, 1fr);
-        gap: 112px;
+        gap: 32px;
     }
 }
 
 
-@media(max-width:390px){
+@media(max-width:580px){
+    .portfolio{
+        padding: 6rem 16px;
+    }
+
     .mywork{
         grid-template-columns: repeat(1, 1fr);
-        gap: 0;
+        gap: 28px;
         
     }
 }

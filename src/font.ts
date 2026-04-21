@@ -1,12 +1,13 @@
-import { Caveat, Inter } from 'next/font/google';
+import { Caveat, Manrope } from 'next/font/google';
+
 export const caveatFont = Caveat({
   subsets: ['latin'],
   variable: '--font-caveat',
-  weight: '400',
+  weight: '700',
 });
 
-export const interFont = Inter({
-    subsets: ['latin'],
-    variable: '--font-inter',
-    weight: ['400','500','600','700','800','900'],
-  });
+export const interFont = Manrope({
+  subsets: ['latin'],
+  variable: '--font-manrope',
+  weight: ['400', '500', '600', '700', '800'],
+});

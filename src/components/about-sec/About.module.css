@@ -1,10 +1,11 @@
 .about{
     width: 100%;
-    background-color: var(--background-light-gray);
-    padding: 10rem 3.5rem;
+    background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+    padding: 8rem 3.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 48px;
 
 }
 .aboutleftdiv{
@@ -21,26 +22,31 @@
     color: var(--logo-color);
 }
 .detailstext{
-    font-size: 16.88px;
-    line-height: 27px;
-    color: white;
+    font-size: 1.02rem;
+    line-height: 1.85;
+    color: var(--text-secondary);
     margin-top: 1.4688rem;
     margin-bottom: 32.5px;
 
 }
 .aboutrightdiv{
-    margin-right: 190px;
+    margin-right: 80px;
 
+}
+
+.img{
+    border-radius: 30px;
+    box-shadow: var(--shadow-soft);
 }
 
 @media(max-width:768px){
     .about{
-        padding: 60px 40px 160px 40px;
+        padding: 60px 40px 100px 40px;
         
 
     }
     .aboutleftdiv{
-        width: 45.182%;
+        width: 52%;
     }
     .aboutrightdiv{
         margin-right: 0px;
@@ -51,15 +57,16 @@
     }
 }
 
-@media(max-width:390px){
+@media(max-width:700px){
     .about{
-        padding: 10rem 0rem;
+        padding: 6rem 1rem;
         flex-direction: column;
         
 
     }
     .aboutleftdiv{
         width: 90%;
+        text-align: center;
     }
     .aboutrightdiv{
         margin-right: 0px;
